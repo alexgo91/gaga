@@ -1,0 +1,128 @@
+{
+  "name": "gaga_app",
+  "serviceNames": [
+    "jsGaga"
+  ],
+  "keepAlive": [],
+  "direction": "LTR",
+  "theme": {
+    "themeColor": "#00b2c8",
+    "captionColor": "yellow",
+    "labelColor": "#eaf2eb",
+    "backgroundColor": "#FFFFFF",
+    "backgroundColor2": "#FFFFFF",
+    "backgroundColor3": "#FFFFFF",
+    "formBackgroundColor": "#eaeff5",
+    "headerBackgroundColor": "#eaeff5",
+    "headerColor": "#00b2c8",
+    "titleColor": "#00b2c8",
+    "titlePosition": "titleInForm",
+    "titleAlignment": "center",
+    "inputLabelColor": "#000000",
+    "inputBorderColor": "#e7e7e7",
+    "inputColor1": "#000000",
+    "inputColor2": "#F9F9F9",
+    "inputLabelPosition": "aboveLabel",
+    "inputFontSize": "13",
+    "inputLabelFontSize": "13",
+    "inputBorderStyle": "noBorder",
+    "inputAlignment": "center",
+    "inputBorderSize": "1",
+    "inputBorderRadius": "24",
+    "buttonColor": "#F5F5F0",
+    "buttonBackgroundColor": "#12afc5",
+    "buttonAlignment": "buttonCentred",
+    "buttonBorderColor": "#12afc5",
+    "buttonFontSize": "16",
+    "tableHeaderBackgroundColor": "#0099AD",
+    "tableHeaderTextColor": "#ffffff",
+    "tableHoverBackgroundColor": "#C2EDF2",
+    "tableEvenRowBackgroundColor": "transparent",
+    "tableOddRowBackgroundColor": "lightgray",
+    "tableRowTextColor": "#333",
+    "sidebarLogoWidth": "200",
+    "logoPosition": "logoHeaderAndMenu",
+    "desktopFormWidth": "900",
+    "mobileFormPercentage": "90",
+    "readOnlyBorderColor": "#e7e7e7",
+    "readOnlyBackgroundColor": "#E0E0E0",
+    "readOnlyColor": "#000000",
+    "readOnlyLabelColor": "#000000",
+    "readOnlyAlignment": "readOnlyCenter",
+    "readOnlyFontSize": "13",
+    "readOnlyLabelFontSize": "13",
+    "readOnlyBorderStyle": "readOnlyNoBorder",
+    "readOnlyBorderSize": "1",
+    "readOnlyBorderRadius": "13",
+    "formBorderRadius": "8",
+    "injectAnimation": "fade",
+    "menuTitle": "Menu",
+    "name": "myEdgeyTheme",
+    "additionalStyle": "\r\n@media only screen and (min-width: 680px) {\r\n\t.myEdgeyTheme #content {\r\n\t\t\t    margin: 25px auto 100px auto !important;\r\n\t\t}\r\n\t}\r\n\t\r\n\t.myEdgeyTheme #content {\r\n   \t\t   \tmargin: 15px auto 0 auto !important;\r\n   \t\t    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);\r\n   \t\t    border-radius: 8px;\r\n    }\r\n    \r\n    .dropdown-container,\r\n    .myEdgeyTheme input[type=\"text\"], \r\n    textarea.ui-input-text,\r\n    .myEdgeyTheme input[type=\"password\"],\r\n    .myEdgeyTheme input[data-type=\"DATE\"],\r\n    .myEdgeyTheme input[type=\"number\"],\r\n    .myEdgeyTheme input[type=\"email\"] {\r\n  \t\t box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.5) !important;\r\n    }\r\n    \r\n   .myEdgeyTheme div.read-only {\r\n     \tbox-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.5) !important;\r\n    }\r\n    \r\n   .myEdgeyTheme button {\r\n      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5) !important;\r\n}\r\n\r\n.myEdgeyTheme input:focus,\r\n.myEdgeyTheme button:focus,\r\n.myEdgeyTheme a:focus,\r\n.myEdgeyTheme textarea:focus,\r\n.myEdgeyTheme span:focus,\r\n.myEdgeyTheme [tabindex=\"0\"]:focus {\r\n\toutline: none !important;\r\n\tbox-shadow: 0 0 5px 2px var(--focus-color) !important;\r\n}\r\n"
+  },
+  "design": {
+    "templateVersion": 0,
+    "roundedCorners": true,
+    "centerDesktopPages": true,
+    "desktopInputWidth": false
+  },
+  "logoWidth": 90,
+  "backgroundStyle": "crop",
+  "backgroundOpacity": 0,
+  "structure": "spa",
+  "pages": [
+    {
+      "name": "page.html",
+      "title": "page",
+      "params": [],
+      "multiRecord": {
+        "params": [],
+        "type": "table",
+        "disableDataTables": false,
+        "isSearchable": true,
+        "isAddRows": false,
+        "isResponsive": false,
+        "isHidden": false,
+        "startIndex": 0
+      },
+      "actions": [
+        {
+          "event": {
+            "type": "buttonClick",
+            "element": "call Gaga",
+            "elementId": "call_Gaga",
+            "attributes": [
+              "bottom",
+              "100",
+              "false",
+              "true"
+            ]
+          },
+          "action": {
+            "type": "executeService",
+            "attribute": {
+              "main": "jsGaga",
+              "onSuccess": {
+                "action": "nothing"
+              },
+              "onFailure": {
+                "action": "popupErrors"
+              }
+            }
+          }
+        }
+      ],
+      "javascript": "",
+      "shouldSkip": false,
+      "hasMenu": true,
+      "inMenu": true,
+      "centred": false
+    }
+  ],
+  "javascript": "@inject:gaga_app.common.js",
+  "createdBy": "admin",
+  "isCompleted": true,
+  "labels": [
+    "GAGA"
+  ]
+}
