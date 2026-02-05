@@ -2,10 +2,25 @@
   "name": "jsGaga",
   "description": "",
   "formUrl": "",
-  "command": "return {\r\n};",
+  "command": "return {\r\n    \"gag\": \"gaga\"\r\n};",
   "isEnabled": true,
   "inputParams": [],
   "outputParams": [
+    {
+      "inTable": false,
+      "newLine": false,
+      "required": false,
+      "custom": false,
+      "validationFunction": "NONE",
+      "fromInput": false,
+      "centred": false,
+      "id": {
+        "name": "gag",
+        "serviceName": "jsGaga"
+      },
+      "paramLabel": "gag",
+      "visible": true
+    },
     {
       "inTable": false,
       "newLine": false,
@@ -70,5 +85,7 @@
   "validationResponseCode": 200,
   "createdBy": "admin",
   "labels": [],
-  "apps": []
+  "apps": [
+    "gaga_app"
+  ]
 }
